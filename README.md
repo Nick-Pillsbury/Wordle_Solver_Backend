@@ -48,20 +48,20 @@ uvicorn main:app --reload
 ## API Usage
 Endpoint: /next-guess (POST)
 Request JSON:
+```
 {
   "green": {"a": [0], "e": [4]},
   "yellow": {"r": [1]},
   "gray": ["t", "o", "s"]
 }
-
+```
 - green: letters in the correct position
 - yellow: letters present but in wrong positions
 - gray: letters not present in the word
-
 Response JSON:
-{
-  "guess": "arise"
-}
+```
+{"guess": "arise"}
+```
 If no valid words remain, the API returns a 400 error.
 
 ---
