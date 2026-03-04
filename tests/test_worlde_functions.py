@@ -15,9 +15,9 @@ def run_tests():
     )
 
     print("Test is_valid_word:")
-    print("Expected: True     apple ->", is_valid_word(board, "apple"))   # expected: True
-    print("Expected: False    zebra ->", is_valid_word(board, "zebra"))   # expected: False (z is gray)
-    print("Expected: False    alarm ->", is_valid_word(board, "alarm"))   # expected: False (l in position 1 is banned)
+    print("Expected: True     apple ->", is_valid_word(board, "apple"))
+    print("Expected: False    zebra ->", is_valid_word(board, "zebra")) 
+    print("Expected: False    alarm ->", is_valid_word(board, "alarm"))
     print()
 
 

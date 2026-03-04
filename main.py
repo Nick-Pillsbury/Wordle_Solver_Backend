@@ -4,7 +4,7 @@ from wordle_functions import load_word_list, BoardState, best_entropy_guess, bes
 
 
 # Load words into memory
-all_words = load_word_list("../files/words.txt")
+all_words = load_word_list("files/words.txt")
 
 
 # HTTP request model

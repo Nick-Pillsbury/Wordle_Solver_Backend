@@ -11,14 +11,30 @@ A Python backend API for solving Wordle puzzles using an entropy-based strategy.
 
 ## Folder Structure
 ```
-root/
-├── scr/
-│   ├── fastapi.py           # FastAPI app
-│   ├── wordle_functions.py  # Solver functions
-│   └── test_api.py          # Api test file
-└── files/
-    |── words.txt            # Word list
-    └── requirements.txt     # Dependencies
+Wordle_Solver_Backend/
+│── main.py                  # FastAPI app
+│── wordle_functions.py      # Solver functions
+|
+├── tests/
+│   ├── test_api.py          # API test file
+│   └── test_functions.py    # Solver function test file
+|
+├── files/
+|   ├── requirements.txt     # Dependencies
+│   └── words.txt            # Word list
+|
+|── Dockerfile
+└── README.md
+```
+
+---
+
+## Requirements
+
+Python 3.10+
+Install dependencies:
+```bash
+pip install -r requirements.txt
 ```
 
 ---
@@ -52,7 +68,14 @@ If no valid words remain, the API returns a 400 error.
 
 ## Testing
 - API Test located in scr/test_api.py
-- Function test located in scr/test_functions.py
-- Run tests with:
-python scr/test_api.py
-python scr/test_functions.py
+- Function test located in scr/test_wordle_functions.py
+These are very simple test scipts.
+
+---
+
+## Docker
+A dockerfile is included.
+```bash
+docker build -t wordle-solver-backend .
+docker run -p 8000:8000 wordle-solver-backend
+```
